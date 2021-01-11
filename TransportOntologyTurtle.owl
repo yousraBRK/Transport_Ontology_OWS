@@ -39,27 +39,27 @@ ont:se_rend rdf:type owl:ObjectProperty ;
             rdfs:range <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu> .
 
 
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#contient
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#contient
 :contient rdf:type owl:ObjectProperty ;
           owl:inverseOf :est_dans ;
           rdfs:domain <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu> ;
           rdfs:range <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station> .
 
 
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#est_dans
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#est_dans
 :est_dans rdf:type owl:ObjectProperty ;
           rdfs:domain <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station> ;
           rdfs:range <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu> .
 
 
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#est_franchie_par
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#est_franchie_par
 :est_franchie_par rdf:type owl:ObjectProperty ;
                   owl:inverseOf :passe_par ;
                   rdfs:domain <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station> ;
                   rdfs:range <http://www.semanticweb.org/yousra/ontologies/2021/11/untitled-ontology-15#Transport> .
 
 
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#passe_par
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#passe_par
 :passe_par rdf:type owl:ObjectProperty ;
            rdfs:domain <http://www.semanticweb.org/yousra/ontologies/2021/11/untitled-ontology-15#Transport> ;
            rdfs:range <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station> .
@@ -108,6 +108,12 @@ ont:Train rdf:type owl:Class ;
                            <http://www.semanticweb.org/yousra/ontologies/2021/11/untitled-ontology-15#Vélo> .
 
 
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Monument
+:Monument rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu> ;
+          owl:disjointWith <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Ville> .
+
+
 ###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu
 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu> rdf:type owl:Class ;
                                                                                  owl:disjointWith <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Personne> ,
@@ -147,13 +153,7 @@ ont:Train rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Ville
 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Ville> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu> ;
-                                                                                  owl:disjointWith :Monument .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Monument
-:Monument rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu> .
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu> .
 
 
 ###  http://www.semanticweb.org/yousra/ontologies/2021/11/untitled-ontology-15#Metro
@@ -2453,30 +2453,30 @@ ont:vélib rdf:type owl:NamedIndividual ,
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#GAREDEL'EST
-<http://www.co-ode.org/ontologies/ont.owl#GAREDELEST> rdf:type owl:NamedIndividual ,
+<http://www.co-ode.org/ontologies/ont.owl#GAREDEL'EST> rdf:type owl:NamedIndividual ,
                                                                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_bus> ;
                                                        :est_franchie_par <http://www.co-ode.org/ontologies/ont.owl#46> .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#GareDel’Est
-<http://www.co-ode.org/ontologies/ont.owl#GareDelEst> rdf:type owl:NamedIndividual ,
+<http://www.co-ode.org/ontologies/ont.owl#GareDel’Est> rdf:type owl:NamedIndividual ,
                                                                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_metro> ;
                                                        :est_franchie_par ont:ligne_5 .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Gared’Austerlitz
-<http://www.co-ode.org/ontologies/ont.owl#GaredAusterlitz> rdf:type owl:NamedIndividual ,
+<http://www.co-ode.org/ontologies/ont.owl#Gared’Austerlitz> rdf:type owl:NamedIndividual ,
                                                                      <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_metro> ;
                                                             :est_franchie_par ont:ligne_5 .
 
 
-###  http://www.co-ode.org/ontologies/ont.owl#LAudonienne
-<http://www.co-ode.org/ontologies/ont.owl#LAudonienne> rdf:type owl:NamedIndividual ,
+###  http://www.co-ode.org/ontologies/ont.owl#L'Audonienne
+<http://www.co-ode.org/ontologies/ont.owl#L'Audonienne> rdf:type owl:NamedIndividual ,
                                                                  ont:Bus .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#L'Hirondelle
-<http://www.co-ode.org/ontologies/ont.owl#LHirondelle> rdf:type owl:NamedIndividual ,
+<http://www.co-ode.org/ontologies/ont.owl#L'Hirondelle> rdf:type owl:NamedIndividual ,
                                                                  ont:Bus .
 
 
@@ -2499,6 +2499,534 @@ ont:vélib rdf:type owl:NamedIndividual ,
 <http://www.co-ode.org/ontologies/ont.owl#Placed’Italie> rdf:type owl:NamedIndividual ,
                                                                   <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_metro> ;
                                                          :est_franchie_par ont:ligne_5 .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Ablon
+:Ablon rdf:type owl:NamedIndividual ,
+                <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+       :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Ablon-sur-Seine> ;
+       :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Auber
+:Auber rdf:type owl:NamedIndividual ,
+                <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+       :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+       :est_franchie_par ont:RER_A .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#AvenueDuPrésident-Kennedy
+:AvenueDuPrésident-Kennedy rdf:type owl:NamedIndividual ,
+                                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                           :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#AvenueFoch
+:AvenueFoch rdf:type owl:NamedIndividual ,
+                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+            :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+            :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#AvenueHenri-Martin
+:AvenueHenri-Martin rdf:type owl:NamedIndividual ,
+                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                    :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                    :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#AéroportCharlesDeGaulle1
+:AéroportCharlesDeGaulle1 rdf:type owl:NamedIndividual ,
+                                   <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                          :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Tremblay-en-France> ;
+                          :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Boulainvilliers
+:Boulainvilliers rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                 :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Bouray
+:Bouray rdf:type owl:NamedIndividual ,
+                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+        :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lardy> ;
+        :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Breuillet-Bruyères-le-Châtel
+:Breuillet-Bruyères-le-Châtel rdf:type owl:NamedIndividual ,
+                                       <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                              :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Breuillet> ;
+                              :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Breuillet-Village
+:Breuillet-Village rdf:type owl:NamedIndividual ,
+                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                   :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Breuillet> ;
+                   :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Brétigny
+:Brétigny rdf:type owl:NamedIndividual ,
+                   <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+          :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Brétigny-sur-Orge> ;
+          :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Cernay
+:Cernay rdf:type owl:NamedIndividual ,
+                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+        :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Ermont> ;
+        :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#ChampDeMars-TourEiffel
+:ChampDeMars-TourEiffel rdf:type owl:NamedIndividual ,
+                                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                        :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                        :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Champigny
+:Champigny rdf:type owl:NamedIndividual ,
+                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Saint-Maur-des-Fossés> ;
+           :est_franchie_par ont:RER_A .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Chantilly
+:Chantilly rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Chaville-Vélizy
+:Chaville-Vélizy rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Viroflay> ;
+                 :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#CitéUniversitaire
+:CitéUniversitaire rdf:type owl:NamedIndividual ,
+                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                   :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                   :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Courcelle-sur-Yvette
+:Courcelle-sur-Yvette rdf:type owl:NamedIndividual ,
+                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Gif-sur-Yvette> ;
+                      :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Creil
+:Creil rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Dourdan-LaForêt
+:Dourdan-LaForêt rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Dourdan> ;
+                 :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Ermont-Eaubonne
+:Ermont-Eaubonne rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                 :est_dans <http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Ermont,Eaubonne> ;
+                 :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Fontaine-Michalon
+:Fontaine-Michalon rdf:type owl:NamedIndividual ,
+                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                   :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Antony> ;
+                   :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Franconville-LePlessis-Bouchard
+:Franconville-LePlessis-Bouchard rdf:type owl:NamedIndividual ,
+                                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Franconville> ;
+                                 :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Gravigny-Balizy
+:Gravigny-Balizy rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Longjumeau> ;
+                 :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Issy
+:Issy rdf:type owl:NamedIndividual ,
+               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Issy-les-Moulineaux> ;
+      :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Issy-ValDeSeine
+:Issy-ValDeSeine rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Issy-les-Moulineaux> ;
+                 :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Javel
+:Javel rdf:type owl:NamedIndividual ,
+                <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+       :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+       :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Juvisy
+:Juvisy rdf:type owl:NamedIndividual ,
+                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+        :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Juvisy-sur-Orge> ;
+        :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LaCourneuve
+:LaCourneuve rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LaCroixDeBerny
+:LaCroixDeBerny rdf:type owl:NamedIndividual ,
+                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Antony> ;
+                :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LaHacquinière
+:LaHacquinière rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+               :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Bures-sur-Yvette> ,
+                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Gif-sur-Yvette> ;
+               :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LaNorville
+:LaNorville rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LaNorville-Saint-Germain-lès-Arpajon
+:LaNorville-Saint-Germain-lès-Arpajon rdf:type owl:NamedIndividual ,
+                                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                                      :est_dans :LaNorville ;
+                                      :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Laplace
+:Laplace rdf:type owl:NamedIndividual ,
+                  <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+         :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Arcueil> ;
+         :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LeBlanc-Mesnil
+:LeBlanc-Mesnil rdf:type owl:NamedIndividual ,
+                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                :est_dans :LeBlanc-Mesnil ;
+                :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LeBourget
+:LeBourget rdf:type owl:NamedIndividual ,
+                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+           :est_dans :LeBourget ,
+                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Drancy> ;
+           :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LeCoudray-Montceaux
+:LeCoudray-Montceaux rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LeGuichet
+:LeGuichet rdf:type owl:NamedIndividual ,
+                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Orsay> ;
+           :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LeMesnil-Amelot
+:LeMesnil-Amelot rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LeMée-sur-Seine
+:LeMée-sur-Seine rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LeParcDeSaint-Maur
+:LeParcDeSaint-Maur rdf:type owl:NamedIndividual ,
+                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                    :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Saint-Maur-des-Fossés> ;
+                    :est_franchie_par ont:RER_A .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LePlessis-Robinson
+:LePlessis-Robinson rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LesArdoines
+:LesArdoines rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+             :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Vitry-sur-Seine> ;
+             :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LesBaconnets
+:LesBaconnets rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+              :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Antony> ;
+              :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LesGrésillons
+:LesGrésillons rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+               :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Gennevilliers> ;
+               :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LesSaules
+:LesSaules rdf:type owl:NamedIndividual ,
+                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Orly> ;
+           :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Lozère
+:Lozère rdf:type owl:NamedIndividual ,
+                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+        :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Palaiseau> ;
+        :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Luxembourg
+:Luxembourg rdf:type owl:NamedIndividual ,
+                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+            :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+            :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Massy-Palaiseau
+:Massy-Palaiseau rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Massy> ,
+                           <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Palaiseau> ;
+                 :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Massy-Verrières
+:Massy-Verrières rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Massy> ,
+                           <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Verrières-le-Buisson> ;
+                 :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Meudon-Val-Fleury
+:Meudon-Val-Fleury rdf:type owl:NamedIndividual ,
+                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                   :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Meudon> ;
+                   :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Neuilly-PorteMaillot
+:Neuilly-PorteMaillot rdf:type owl:NamedIndividual ,
+                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                      :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Orly-Ville
+:Orly-Ville rdf:type owl:NamedIndividual ,
+                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+            :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Orly> ;
+            :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Orry-la-Ville
+:Orry-la-Ville rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#ParcDeSceaux
+:ParcDeSceaux rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+              :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Antony> ,
+                        <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Sceaux> ;
+              :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#ParcDesExpositions
+:ParcDesExpositions rdf:type owl:NamedIndividual ,
+                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                    :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Villepinte> ;
+                    :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Paris-Austerlitz
+:Paris-Austerlitz rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                  :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                  :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Paris-Gare-de-Lyon
+:Paris-Gare-de-Lyon rdf:type owl:NamedIndividual ,
+                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                    :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                    :est_franchie_par ont:RER_D .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Paris-GareDuNord
+:Paris-GareDuNord rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                  :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                  :est_franchie_par ont:RER_D .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Pereire-Levallois
+:Pereire-Levallois rdf:type owl:NamedIndividual ,
+                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                   :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                   :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#PetitJouy-LesLoges
+:PetitJouy-LesLoges rdf:type owl:NamedIndividual ,
+                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                    :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Jouy-en-Josas> ,
+                              <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#LesLoges-en-Josas> ;
+                    :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#PetitVaux
+:PetitVaux rdf:type owl:NamedIndividual ,
+                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Épinay-sur-Orge> ;
+           :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#PontDuGarigliano
+:PontDuGarigliano rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                  :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                  :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Porchefontaine
+:Porchefontaine rdf:type owl:NamedIndividual ,
+                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Versailles> ;
+                :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Port-Royal
+:Port-Royal rdf:type owl:NamedIndividual ,
+                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+            :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+            :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Robinson
+:Robinson rdf:type owl:NamedIndividual ,
+                   <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+          :est_dans :LePlessis-Robinson ,
+                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Châtenay-Malabry> ,
+                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Sceaux> ;
+          :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Rungis-LaFraternelle
+:Rungis-LaFraternelle rdf:type owl:NamedIndividual ,
+                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Rungis> ;
+                      :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Saint-Cyr
+:Saint-Cyr rdf:type owl:NamedIndividual ,
+                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Saint-Cyr-l'École> ;
+           :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Saint-Michel-Notre-Dame
+:Saint-Michel-Notre-Dame rdf:type owl:NamedIndividual ,
+                                  <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                         :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
+                         :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Saint-Ouen
+:Saint-Ouen rdf:type owl:NamedIndividual ,
+                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+            :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Saint-Ouen-sur-Seine> ;
+            :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Saint-Quentin-en-Yvelines
+:Saint-Quentin-en-Yvelines rdf:type owl:NamedIndividual ,
+                                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Montigny-le-Bretonneux> ;
+                           :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Tour_Eiffel
+:Tour_Eiffel rdf:type owl:NamedIndividual ,
+                      :Monument ,
+                      <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu> ;
+             rdfs:comment "http://fr.dbpedia.org/page/Tour_Eiffel" .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#ValDeFontenay
+:ValDeFontenay rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+               :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Fontenay-sous-Bois> ;
+               :est_franchie_par ont:RER_A .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Vauboyen
+:Vauboyen rdf:type owl:NamedIndividual ,
+                   <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+          :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Bièvres> ;
+          :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Versailles-Chantiers
+:Versailles-Chantiers rdf:type owl:NamedIndividual ,
+                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Versailles> ;
+                      :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Versailles-Château-Rive-Gauche
+:Versailles-Château-Rive-Gauche rdf:type owl:NamedIndividual ,
+                                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                                :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Versailles> ;
+                                :est_franchie_par ont:RER_C .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Vert-Galant
+:Vert-Galant rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+             :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Tremblay-en-France> ,
+                       <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Villepinte> ;
+             :est_franchie_par ont:RER_B .
+
+
+###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Viroflay-Rive-Gauche
+:Viroflay-Rive-Gauche rdf:type owl:NamedIndividual ,
+                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
+                      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Viroflay> ;
+                      :est_franchie_par ont:RER_C .
 
 
 ###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Achères–GrandCormier
@@ -2632,7 +3160,7 @@ ont:vélib rdf:type owl:NamedIndividual ,
 
 
 ###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Chemind'Antony
-<http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#ChemindAntony> rdf:type owl:NamedIndividual ,
+<http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Chemind'Antony> rdf:type owl:NamedIndividual ,
                                                                                                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
                                                                                                :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Antony> ;
                                                                                                :est_franchie_par ont:RER_C .
@@ -2758,8 +3286,8 @@ ont:vélib rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LaCourneuve–Aubervilliers
 <http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#LaCourneuve–Aubervilliers> rdf:type owl:NamedIndividual ,
                                                                                                                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                                                                                                          :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Aubervilliers> ,
-                                                                                                                    :LaCourneuve ;
+                                                                                                          :est_dans :LaCourneuve ,
+                                                                                                                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Aubervilliers> ;
                                                                                                           :est_franchie_par ont:RER_B .
 
 
@@ -8624,7 +9152,11 @@ ont:vélib rdf:type owl:NamedIndividual ,
 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> rdf:type owl:NamedIndividual ,
                                                                                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_metro> ,
                                                                                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Ville> ;
-                                                                                  :contient <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Abbesses> ,
+                                                                                  :contient :Auber ,
+                                                                                            :AvenueDuPrésident-Kennedy ,
+                                                                                            :AvenueFoch ,
+                                                                                            :AvenueHenri-Martin ,
+                                                                                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Abbesses> ,
                                                                                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#AlexandreDumas> ,
                                                                                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Alma-Marceau> ,
                                                                                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Alésia> ,
@@ -8647,11 +9179,7 @@ ont:vélib rdf:type owl:NamedIndividual ,
                                                                                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Bolivar> ,
                                                                                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Bonne-Nouvelle> ,
                                                                                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Botzaris> ,
-                                                                                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Boucicaut> ,
-                                                                                            :Auber ,
-                                                                                            :AvenueDuPrésident-Kennedy ,
-                                                                                            :AvenueFoch ,
-                                                                                            :AvenueHenri-Martin .
+                                                                                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Boucicaut> .
 
 
 ###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Parmain
@@ -11393,534 +11921,6 @@ ont:vélib rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Églised'Auteuil
 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Églised'Auteuil> rdf:type owl:NamedIndividual ,
                                                                                                      <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_metro> .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Ablon
-:Ablon rdf:type owl:NamedIndividual ,
-                <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-       :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Ablon-sur-Seine> ;
-       :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Auber
-:Auber rdf:type owl:NamedIndividual ,
-                <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-       :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-       :est_franchie_par ont:RER_A .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#AvenueDuPrésident-Kennedy
-:AvenueDuPrésident-Kennedy rdf:type owl:NamedIndividual ,
-                                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                           :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#AvenueFoch
-:AvenueFoch rdf:type owl:NamedIndividual ,
-                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-            :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-            :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#AvenueHenri-Martin
-:AvenueHenri-Martin rdf:type owl:NamedIndividual ,
-                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                    :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                    :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#AéroportCharlesDeGaulle1
-:AéroportCharlesDeGaulle1 rdf:type owl:NamedIndividual ,
-                                   <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                          :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Tremblay-en-France> ;
-                          :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Boulainvilliers
-:Boulainvilliers rdf:type owl:NamedIndividual ,
-                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                 :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Bouray
-:Bouray rdf:type owl:NamedIndividual ,
-                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-        :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lardy> ;
-        :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Breuillet-Bruyères-le-Châtel
-:Breuillet-Bruyères-le-Châtel rdf:type owl:NamedIndividual ,
-                                       <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                              :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Breuillet> ;
-                              :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Breuillet-Village
-:Breuillet-Village rdf:type owl:NamedIndividual ,
-                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                   :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Breuillet> ;
-                   :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Brétigny
-:Brétigny rdf:type owl:NamedIndividual ,
-                   <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-          :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Brétigny-sur-Orge> ;
-          :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Cernay
-:Cernay rdf:type owl:NamedIndividual ,
-                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-        :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Ermont> ;
-        :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#ChampDeMars-TourEiffel
-:ChampDeMars-TourEiffel rdf:type owl:NamedIndividual ,
-                                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                        :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                        :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Champigny
-:Champigny rdf:type owl:NamedIndividual ,
-                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Saint-Maur-des-Fossés> ;
-           :est_franchie_par ont:RER_A .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Chantilly
-:Chantilly rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Chaville-Vélizy
-:Chaville-Vélizy rdf:type owl:NamedIndividual ,
-                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Viroflay> ;
-                 :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#CitéUniversitaire
-:CitéUniversitaire rdf:type owl:NamedIndividual ,
-                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                   :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                   :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Courcelle-sur-Yvette
-:Courcelle-sur-Yvette rdf:type owl:NamedIndividual ,
-                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Gif-sur-Yvette> ;
-                      :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Creil
-:Creil rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Dourdan-LaForêt
-:Dourdan-LaForêt rdf:type owl:NamedIndividual ,
-                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Dourdan> ;
-                 :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Ermont-Eaubonne
-:Ermont-Eaubonne rdf:type owl:NamedIndividual ,
-                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                 :est_dans <http://www.semanticweb.org/Kaouter_Yousra/ontologies/2021/Transport_Ontologie#Ermont,Eaubonne> ;
-                 :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Fontaine-Michalon
-:Fontaine-Michalon rdf:type owl:NamedIndividual ,
-                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                   :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Antony> ;
-                   :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Franconville-LePlessis-Bouchard
-:Franconville-LePlessis-Bouchard rdf:type owl:NamedIndividual ,
-                                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Franconville> ;
-                                 :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Gravigny-Balizy
-:Gravigny-Balizy rdf:type owl:NamedIndividual ,
-                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Longjumeau> ;
-                 :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Issy
-:Issy rdf:type owl:NamedIndividual ,
-               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Issy-les-Moulineaux> ;
-      :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Issy-ValDeSeine
-:Issy-ValDeSeine rdf:type owl:NamedIndividual ,
-                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Issy-les-Moulineaux> ;
-                 :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Javel
-:Javel rdf:type owl:NamedIndividual ,
-                <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-       :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-       :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Juvisy
-:Juvisy rdf:type owl:NamedIndividual ,
-                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-        :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Juvisy-sur-Orge> ;
-        :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LaCourneuve
-:LaCourneuve rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LaCroixDeBerny
-:LaCroixDeBerny rdf:type owl:NamedIndividual ,
-                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Antony> ;
-                :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LaHacquinière
-:LaHacquinière rdf:type owl:NamedIndividual ,
-                        <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-               :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Bures-sur-Yvette> ,
-                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Gif-sur-Yvette> ;
-               :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LaNorville
-:LaNorville rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LaNorville-Saint-Germain-lès-Arpajon
-:LaNorville-Saint-Germain-lès-Arpajon rdf:type owl:NamedIndividual ,
-                                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                                      :est_dans :LaNorville ;
-                                      :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Laplace
-:Laplace rdf:type owl:NamedIndividual ,
-                  <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-         :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Arcueil> ;
-         :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LeBlanc-Mesnil
-:LeBlanc-Mesnil rdf:type owl:NamedIndividual ,
-                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                :est_dans :LeBlanc-Mesnil ;
-                :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LeBourget
-:LeBourget rdf:type owl:NamedIndividual ,
-                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Drancy> ,
-                     :LeBourget ;
-           :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LeCoudray-Montceaux
-:LeCoudray-Montceaux rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LeGuichet
-:LeGuichet rdf:type owl:NamedIndividual ,
-                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Orsay> ;
-           :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LeMesnil-Amelot
-:LeMesnil-Amelot rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LeMée-sur-Seine
-:LeMée-sur-Seine rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LeParcDeSaint-Maur
-:LeParcDeSaint-Maur rdf:type owl:NamedIndividual ,
-                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                    :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Saint-Maur-des-Fossés> ;
-                    :est_franchie_par ont:RER_A .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LePlessis-Robinson
-:LePlessis-Robinson rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LesArdoines
-:LesArdoines rdf:type owl:NamedIndividual ,
-                      <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-             :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Vitry-sur-Seine> ;
-             :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LesBaconnets
-:LesBaconnets rdf:type owl:NamedIndividual ,
-                       <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-              :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Antony> ;
-              :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LesGrésillons
-:LesGrésillons rdf:type owl:NamedIndividual ,
-                        <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-               :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Gennevilliers> ;
-               :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#LesSaules
-:LesSaules rdf:type owl:NamedIndividual ,
-                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Orly> ;
-           :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Lozère
-:Lozère rdf:type owl:NamedIndividual ,
-                 <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-        :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Palaiseau> ;
-        :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Luxembourg
-:Luxembourg rdf:type owl:NamedIndividual ,
-                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-            :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-            :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Massy-Palaiseau
-:Massy-Palaiseau rdf:type owl:NamedIndividual ,
-                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Massy> ,
-                           <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Palaiseau> ;
-                 :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Massy-Verrières
-:Massy-Verrières rdf:type owl:NamedIndividual ,
-                          <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                 :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Massy> ,
-                           <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Verrières-le-Buisson> ;
-                 :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Meudon-Val-Fleury
-:Meudon-Val-Fleury rdf:type owl:NamedIndividual ,
-                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                   :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Meudon> ;
-                   :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Neuilly-PorteMaillot
-:Neuilly-PorteMaillot rdf:type owl:NamedIndividual ,
-                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                      :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Orly-Ville
-:Orly-Ville rdf:type owl:NamedIndividual ,
-                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-            :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Orly> ;
-            :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Orry-la-Ville
-:Orry-la-Ville rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#ParcDeSceaux
-:ParcDeSceaux rdf:type owl:NamedIndividual ,
-                       <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-              :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Antony> ,
-                        <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Sceaux> ;
-              :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#ParcDesExpositions
-:ParcDesExpositions rdf:type owl:NamedIndividual ,
-                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                    :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Villepinte> ;
-                    :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Paris-Austerlitz
-:Paris-Austerlitz rdf:type owl:NamedIndividual ,
-                           <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                  :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                  :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Paris-Gare-de-Lyon
-:Paris-Gare-de-Lyon rdf:type owl:NamedIndividual ,
-                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                    :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                    :est_franchie_par ont:RER_D .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Paris-GareDuNord
-:Paris-GareDuNord rdf:type owl:NamedIndividual ,
-                           <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                  :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                  :est_franchie_par ont:RER_D .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Pereire-Levallois
-:Pereire-Levallois rdf:type owl:NamedIndividual ,
-                            <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                   :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                   :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#PetitJouy-LesLoges
-:PetitJouy-LesLoges rdf:type owl:NamedIndividual ,
-                             <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                    :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Jouy-en-Josas> ,
-                              <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#LesLoges-en-Josas> ;
-                    :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#PetitVaux
-:PetitVaux rdf:type owl:NamedIndividual ,
-                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Épinay-sur-Orge> ;
-           :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#PontDuGarigliano
-:PontDuGarigliano rdf:type owl:NamedIndividual ,
-                           <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                  :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                  :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Porchefontaine
-:Porchefontaine rdf:type owl:NamedIndividual ,
-                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Versailles> ;
-                :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Port-Royal
-:Port-Royal rdf:type owl:NamedIndividual ,
-                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-            :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-            :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Robinson
-:Robinson rdf:type owl:NamedIndividual ,
-                   <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-          :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Châtenay-Malabry> ,
-                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Sceaux> ,
-                    :LePlessis-Robinson ;
-          :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Rungis-LaFraternelle
-:Rungis-LaFraternelle rdf:type owl:NamedIndividual ,
-                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Rungis> ;
-                      :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Saint-Cyr
-:Saint-Cyr rdf:type owl:NamedIndividual ,
-                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Saint-Cyr-l'École> ;
-           :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Saint-Michel-Notre-Dame
-:Saint-Michel-Notre-Dame rdf:type owl:NamedIndividual ,
-                                  <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                         :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Paris> ;
-                         :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Saint-Ouen
-:Saint-Ouen rdf:type owl:NamedIndividual ,
-                     <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-            :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Saint-Ouen-sur-Seine> ;
-            :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Saint-Quentin-en-Yvelines
-:Saint-Quentin-en-Yvelines rdf:type owl:NamedIndividual ,
-                                    <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                           :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Montigny-le-Bretonneux> ;
-                           :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Tour_Eiffel
-:Tour_Eiffel rdf:type owl:NamedIndividual ,
-                      <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Lieu> ,
-                      :Monument ;
-             rdfs:comment "http://fr.dbpedia.org/page/Tour_Eiffel" .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#ValDeFontenay
-:ValDeFontenay rdf:type owl:NamedIndividual ,
-                        <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-               :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Fontenay-sous-Bois> ;
-               :est_franchie_par ont:RER_A .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Vauboyen
-:Vauboyen rdf:type owl:NamedIndividual ,
-                   <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-          :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Bièvres> ;
-          :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Versailles-Chantiers
-:Versailles-Chantiers rdf:type owl:NamedIndividual ,
-                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Versailles> ;
-                      :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Versailles-Château-Rive-Gauche
-:Versailles-Château-Rive-Gauche rdf:type owl:NamedIndividual ,
-                                         <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                                :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Versailles> ;
-                                :est_franchie_par ont:RER_C .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Vert-Galant
-:Vert-Galant rdf:type owl:NamedIndividual ,
-                      <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-             :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Tremblay-en-France> ,
-                       <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Villepinte> ;
-             :est_franchie_par ont:RER_B .
-
-
-###  http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-8#Viroflay-Rive-Gauche
-:Viroflay-Rive-Gauche rdf:type owl:NamedIndividual ,
-                               <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Station_de_RER> ;
-                      :est_dans <http://www.semanticweb.org/kaouter/ontologies/2021/11/untitled-ontology-7#Viroflay> ;
-                      :est_franchie_par ont:RER_C .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
